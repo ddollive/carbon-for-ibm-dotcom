@@ -1,0 +1,23 @@
+/**
+ * Copyright IBM Corp. 2016, 2020
+ *
+ * This source code is licensed under the Apache-2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+ @import '../../globals/vars';
+ @import '../../globals/imports';
+ @import '../../globals/utils/ratio-base';
+ @import '../../internal/content-section/content-section';
+ @import '../card/index';
+ @import '../image/image';
+ @import '../link-with-icon/link-with-icon';
+
+@mixin content-group-l-shaped {
+  :host(#{$dds-prefix}-content-group-l-shaped)::slotted(dds-card-group-item) {
+    grid-column-start:3;
+  }
+}
+
+@include exports('content-group-l-shaped') {
+  @include content-group-l-shaped;
+}
